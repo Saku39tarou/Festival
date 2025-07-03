@@ -49,4 +49,12 @@ public class Player : MonoBehaviour
 			isjumpPower = true;
 		}
 	}
+
+	private void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.CompareTag("Floor"))
+		{
+			isjumpPower = false;
+		}
 	}
+}
