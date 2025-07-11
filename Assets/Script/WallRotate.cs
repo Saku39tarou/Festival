@@ -7,9 +7,13 @@ public class WallRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if(Input.GetKeyDown(KeyCode.T))
+		if(Input.GetKeyDown(KeyCode.LeftArrow))
 		{
-			transform.Rotate(0, 5, 0);
+			transform.Rotate(0, 10, 0);
+		}
+		if(Input.GetKeyDown(KeyCode.RightArrow))
+		{
+			transform.Rotate(0, -10, 0);
 		}
     }
 }

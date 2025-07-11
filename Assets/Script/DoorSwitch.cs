@@ -4,33 +4,24 @@ using UnityEngine;
 
 public class DoorSwitch : MonoBehaviour
 {
-	float bottomY = -0.1f;
-	float speed = 0.5f;
+	private Vector3 pos;
+	private bool stopKey = false;
 
-	bool active;
-
-	public Door door;//Doorスクリプトとつなげる
-
-	 void Update()
+	void Update()
 	{
-		if(active && transform.position.y > bottomY)
+		pos = transform.position;
+
+		if (!stopKey)
 		{
-			transform.position -= Vector3.up * speed * Time.deltaTime;
-		
-			if(transform.position.y <= bottomY)
-			{
-				door.isOpen = true;
-				enabled = false;
-			}
+			//今回は上に開く
+			transform.Translate(0, 0, 0.01f);//x,y,z軸上に動く値
+											 //transform.Translate(0, 0.01f, 0);//x,y,z軸上に動く値
 		}
-	}
 
-	private void OnTriggerEnter(Collider other)
-	{
-		if(!active && other.CompareTag("Player"))
+		//ドアが指定した高さを超えたら止める
+		if (pos.y > 3f)
 		{
-			active = true;
-			Debug.Log("触れた");
+			stopKey = true;
 		}
 	}
 }
