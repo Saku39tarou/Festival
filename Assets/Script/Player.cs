@@ -43,11 +43,11 @@ public class Player : MonoBehaviour
 		}
 
 		//ジャンプ
-		if (Input.GetKeyDown(KeyCode.Space) && !isjumpPower)
+		/*if (Input.GetKeyDown(KeyCode.Space) && !isjumpPower)
 		{
 			rigid.velocity = Vector3.up * jump;//ジャンプ速度
 			isjumpPower = true;
-		}
+		}*/
 	}
 
 	private void OnCollisionEnter(Collision collision)
