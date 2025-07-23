@@ -19,7 +19,7 @@ public class DoorSwitch : MonoBehaviour
 		}
 
 		//ƒhƒA‚ªŽw’è‚µ‚½‚‚³‚ð’´‚¦‚½‚çŽ~‚ß‚é
-		if (pos.y > 3f)
+		if (pos.y > 10f)
 		{
 			stopKey = true;
 		}
