@@ -9,6 +9,8 @@ TagManager:
   - Object
   - key
   - Switch
+  - Switch2
+  - Item2
   layers:
   - Default
   - TransparentFX
