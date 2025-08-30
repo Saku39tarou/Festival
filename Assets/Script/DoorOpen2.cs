@@ -10,6 +10,7 @@ public class DoorOpen2 : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
+			Destroy(door, 3.5f);
 			door.GetComponent<DoorSwitch>().enabled = true;
 
 			this.gameObject.SetActive(false);
