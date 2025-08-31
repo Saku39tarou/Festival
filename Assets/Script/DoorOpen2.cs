@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorOpen2 : MonoBehaviour
 {
 	public GameObject door;
+	public AudioClip myClip;
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -14,6 +15,7 @@ public class DoorOpen2 : MonoBehaviour
 			door.GetComponent<DoorSwitch>().enabled = true;
 
 			this.gameObject.SetActive(false);
+			AudioSource.PlayClipAtPoint(myClip, transform.position);
 		}
 	}
 }

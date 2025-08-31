@@ -23,5 +23,6 @@ public class DoorSwitch : MonoBehaviour
 		{
 			stopKey = true;
 		}
+		
 	}
 }

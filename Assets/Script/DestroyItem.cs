@@ -7,6 +7,7 @@ public class DestroyItem : MonoBehaviour
 {
 	public GameObject Item;
 	public GameObject Door;
+	public AudioClip myClip;
 	// Update is called once per frame
 	private void OnCollisionEnter(Collision collision)//衝突したら・・・
 	{
@@ -16,7 +17,7 @@ public class DestroyItem : MonoBehaviour
 			Destroy(Item, 1.0f);
 			Destroy(Door, 5.0f);
 			Debug.Log("扉開いた");
- 
+			AudioSource.PlayClipAtPoint(myClip, transform.position);
 		}
 	}
 }
