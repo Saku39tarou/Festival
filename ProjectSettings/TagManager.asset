@@ -11,6 +11,8 @@ TagManager:
   - Switch
   - Switch2
   - Item2
+  - Item3
+  - Switch3
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ public class DestroyItem : MonoBehaviour
 		{
 			
 			Destroy(Item, 1.0f);
-			Destroy(Door, 5.0f);
+			Destroy(Door, 1.0f);
 			Debug.Log("”àŠJ‚¢‚½");
 			AudioSource.PlayClipAtPoint(myClip, transform.position);
 		}
